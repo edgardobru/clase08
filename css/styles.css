@@ -1,0 +1,135 @@
+
+/* viene en el siguiente orden:
+por ejemplo 
+si hay dos h1 va por cascada es decir toma el style del ultimo.
+si hay dos h1 pero uno de ellos tiene important toma el important.
+si hay un style en el h1 del html toma ese style que se denomina "estilos inline"porque esta en la linea de codigo.
+si hay una clase en el h1 toma la clase
+si hay una clase y un id toma el id.
+ */
+
+h1{
+    color:red important;
+}
+
+
+h1{
+    color:green ;
+}
+
+.clasecualquiera{
+    color:grey;
+}
+
+#idcualquiera{
+    color:blueviolet;
+}
+
+span{background-color: aquamarine;}
+
+ 
+/* div  {
+    background-color: aquamarine;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    } */
+
+*{margin:5px;
+    box-sizing: border-box;
+}
+.margin{
+    background-color: indigo;
+    width: 200px;
+    height: 150px;
+    /* margin: 10px; */
+    /* margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 20px;
+    margin-bottom: 30px; */
+    /* margin: 5px 10px;
+    margin: 5px 10px 15px; */
+    margin: 5px 10px 15px 20px;
+    /* top right bottom left */
+}
+
+.padding{
+    background-color: slateblue;
+    width: 200px;
+    height: 150px;
+    margin: 5px 10px 15px 20px;
+    /* top right bottom left */
+    padding:30px;
+
+}    
+
+
+.border{
+    background-color: tomato;
+    width: 200px;
+    height: 150px;
+    margin: 5px 10px 15px 20px;
+    /* top right bottom left */
+    padding:30px;
+    /* border:5px solid black; */
+    /* border:5px dotted black; */
+    border:5px dashed black;
+    /* box sizing tiene border box y context box, por defecto usamos context box. */
+   /*  box-sizing: content-box; */
+    /* box-sizing: border-box; */
+}
+
+.cm{
+    font-size: 2cm;
+}
+.mm{
+    font-size: 20mm;
+}
+.px{
+    font-size: 20px;
+}
+.pt{
+    font-size: 20pt;
+}
+
+.in{
+    font-size: 0.3in;
+}
+
+.pc{
+    font-size: 2pc;
+}
+
+
+ .em{
+    font-size: 2em;
+    /* el em aplica sobre todos los padres entonces
+    si esta dentro de una etiqueta que esta adentro de una section hace
+    2 del em x 2 del section x 16px del html = 64px */
+} 
+
+section{
+    font-size: 2em;
+}
+.rem{
+    font-size: 2rem;
+    /* el rem es la r de root em significa
+     que aplica el em del root solamente y no de todos los padres 
+     por lo tanto hace 2 por 16 px (del html) que nos da 32px*/
+}
+
+html{
+   /*  font-size: 16px; */
+    font-size: 62.5%;
+    /* el html tiene 16 px por default
+    si 16 px es el 100 % cuanto porcentaje es 10 px (regla de tres simple) 
+     entonces si quiero que valga 10 px lo que puedo hacer es : 10 * 100 / 16 = 62.5% */
+}
+
+
+img{
+    width:10vw ;
+    /* 50% del ancho del navegador vw es view width */
+   /*  height: 30vh; */
+    /* 30% de la altura del navegador vh view height */
+}
